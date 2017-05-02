@@ -11,8 +11,8 @@
   	"stroke": "#19D119",
 		"strokeWidth": 20,
 		"defaultMass": {
-            "from": 100,
-            "to": 150
+            "from": 999,
+            "to": 999
         },
 		"splitMass": 180
 	},
@@ -26,9 +26,9 @@
     "logChat": 0,
     "networkUpdateFactor": 40,
     "maxHeartbeatInterval": 60000,
-    "foodUniformDisposition": false,
+    "foodUniformDisposition": true,
     "virusUniformDisposition": true,
-    "newPlayerInitialPosition": "farthest",
+    "newPlayerInitialPosition": "closest",
     "massLossRate": 1,
     "minMassLoss": 50,
     "mergeTimer": 15,
