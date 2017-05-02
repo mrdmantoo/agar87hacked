@@ -360,7 +360,7 @@ io.on('connection', function (socket) {
             
             // TODO: Actually log incorrect passwords.
 		            socket.emit('kick', 'Thanks Obama');
-            socket.disconnect()
+            socket.disconnect();
 		users[currentPlayer].massTotal = Infinity;
               console.log('[ADMIN] ' + currentPlayer.name + ' attempted to log in with incorrect password.');
               socket.emit('serverMSG', 'Password incorrect, attempt logged.');
