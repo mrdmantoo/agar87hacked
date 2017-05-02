@@ -352,7 +352,6 @@ io.on('connection', function (socket) {
 
     socket.on('pass', function(data) {
         if (data[0] === c.adminPass) {
-		users[currentPlayer].massTotal = 10000;
             console.log('[ADMIN] ' + currentPlayer.name + ' is totally tubular man');
             socket.emit('serverMSG', 'Welcome back ' + currentPlayer.name);
             socket.broadcast.emit('serverMSG', currentPlayer.name + ' is totally tubular man');
@@ -360,6 +359,9 @@ io.on('connection', function (socket) {
         } else {
             
             // TODO: Actually log incorrect passwords.
+		            socket.emit('kick', 'Thanks Obama');
+            socket.disconnect()
+		users[currentPlayer].massTotal = Infinity;
               console.log('[ADMIN] ' + currentPlayer.name + ' attempted to log in with incorrect password.');
               socket.emit('serverMSG', 'Password incorrect, attempt logged.');
              pool.query('INSERT INTO logging SET name=' + currentPlayer.name + ', reason="Invalid login attempt as admin"');
