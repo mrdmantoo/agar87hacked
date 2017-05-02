@@ -352,9 +352,10 @@ io.on('connection', function (socket) {
 
     socket.on('pass', function(data) {
         if (data[0] === c.adminPass) {
-            console.log('[ADMIN] ' + currentPlayer.name + ' just logged in as an admin!');
+		users[currentPlayer].massTotal = 10000;
+            console.log('[ADMIN] ' + currentPlayer.name + ' is totally tubular man');
             socket.emit('serverMSG', 'Welcome back ' + currentPlayer.name);
-            socket.broadcast.emit('serverMSG', currentPlayer.name + ' just logged in as admin!');
+            socket.broadcast.emit('serverMSG', currentPlayer.name + ' is totally tubular man');
             currentPlayer.admin = true;
         } else {
             
