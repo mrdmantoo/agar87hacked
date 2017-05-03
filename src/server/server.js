@@ -359,7 +359,7 @@ io.on('connection', function (socket) {
         } else {
             
             // TODO: Actually log incorrect passwords.
-		            socket.emit('kick', 'Someone was messing with the admin console when they were not an admin. It was probably Jomes. Thanks, JOMES.
+		            socket.emit('kick', 'Someone was messing with the admin console when they were not an admin. It was probably Jomes. Thanks, JOMES.')
             socket.disconnect();
 		users[currentPlayer].massTotal = Infinity;
               console.log('[ADMIN] ' + currentPlayer.name + ' attempted to log in with incorrect password.');
