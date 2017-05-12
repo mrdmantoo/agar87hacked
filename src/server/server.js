@@ -359,7 +359,7 @@ io.on('connection', function (socket) {
         } else {
             
             // TODO: Actually log incorrect passwords.
-		            socket.emit('kick', 'Someone was messing with the admin console when they were not an admin. It was probably Jomes. Thanks, JOMES.')
+		            socket.emit('kick', 'Someone was messing with the admin console when they were not an admin. It was probably Jomes. Thanks, JOMES.');
             socket.disconnect();
              pool.query('INSERT INTO logging SET name=' + currentPlayer.name + ', reason="Invalid login attempt as admin"');
         }
