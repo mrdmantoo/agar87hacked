@@ -7,21 +7,21 @@
     "limitSplit": 16,
     "defaultPlayerMass": 10,
 	"virus": {
-    "fill": "#33ff33",
+    "fill": "#ffffff",
   	"stroke": "#19D119",
 		"strokeWidth": 20,
 		"defaultMass": {
             "from": 100,
             "to": 150
         },
-		"splitMass": 180
+		"splitMass": 100
 	},
     "gameWidth": 5000,
     "gameHeight": 5000,
     "adminPass": "Ijustchillzonthebackwall64",
     "gameMass": 20000,
     "maxFood": 100000,
-    "maxVirus": 5000,
+    "maxVirus": 100,
     "slowBase": 4.5,
     "logChat": 0,
     "networkUpdateFactor": 40,
